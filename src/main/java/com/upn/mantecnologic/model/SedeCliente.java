@@ -1,15 +1,15 @@
 package com.upn.mantecnologic.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name="tb_sede_cliente")
 @Data
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class SedeCliente {
     @Id

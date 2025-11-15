@@ -1,9 +1,7 @@
 package com.upn.mantecnologic.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -12,6 +10,9 @@ import java.math.BigDecimal;
 @Data
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class TipoEquipo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
