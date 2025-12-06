@@ -15,13 +15,13 @@ public class ModeloEquipo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_modelo")
-    private Integer id_modelo;
+    public Integer id_modelo;
 
     @Column(name ="dsc_modelo",length = 200,nullable = false)
-    private String dsc_modelo;
+    public String dsc_modelo;
 
     @ManyToOne
     @JoinColumn(name = "id_marca", nullable = false)
-    private MarcaEquipo marca;
+    public MarcaEquipo marca;
 
 }

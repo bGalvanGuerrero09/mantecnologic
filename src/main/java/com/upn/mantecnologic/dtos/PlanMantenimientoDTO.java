@@ -9,17 +9,17 @@ import java.util.Date;
 @Getter
 @Setter
 public class PlanMantenimientoDTO {
-    private Integer id_plan;
-    private String dsc_plan;
-    private TipoPlan tipo;
-    private Date fch_minima;
-    private Date fch_maxima;
-    private EstadoPlan estado;
-    private SedeCliente sede;
-    private BigDecimal imp_total;
-    private Trabajador trabajador;
-    private Usuario usuario;
-    private Date fch_fin_atencion;
-    private Date fch_registro;
+    public Integer id_plan;
+    public String dsc_plan;
+    public TipoPlan tipo;
+    public Date fch_minima;
+    public Date fch_maxima;
+    public EstadoPlan estado;
+    public SedeCliente sede;
+    public BigDecimal imp_total;
+    public Trabajador trabajador;
+    public Usuario usuario;
+    public Date fch_fin_atencion;
+    public Date fch_registro;
 
 }

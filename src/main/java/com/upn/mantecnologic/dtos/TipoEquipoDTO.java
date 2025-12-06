@@ -8,8 +8,8 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class TipoEquipoDTO {
-    private Integer id_tipo;
-    private String dsc_tipo;
-    private BigDecimal imp_costo_preventivo;
-    private BigDecimal imp_costo_correctivo;
+    public Integer id_tipo;
+    public String dsc_tipo;
+    public BigDecimal imp_costo_preventivo;
+    public BigDecimal imp_costo_correctivo;
 }

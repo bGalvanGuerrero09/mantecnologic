@@ -1,7 +1,7 @@
 package com.upn.mantecnologic.repository;
 
+import com.upn.mantecnologic.model.PlanMantenimiento;
 import com.upn.mantecnologic.model.SedeCliente;
-import com.upn.mantecnologic.model.TipoEquipo;
 import com.upn.mantecnologic.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,9 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usuario,Integer> {
-
-    @Query(value = "SELECT * FROM tb_usuario WHERE dsc_usuario = :usuario AND dsc_clave = :clave LIMIT 1",nativeQuery = true)
-    Optional<Usuario> login(@Param("usuario") String usuario, @Param("clave") String clave);
-
+public interface SedeClienteRepository  extends JpaRepository<SedeCliente,Integer> {
+    @Query(value = "SELECT * FROM tb_sede_cliente WHERE id_cliente = :id_cliente order by dsc_sede asc",nativeQuery = true)
+    List<SedeCliente> listarSedesxCliente(@Param("id_cliente") Integer idCliente);
 }

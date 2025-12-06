@@ -13,5 +13,5 @@ public interface EquipoService   {
     EquipoDTO registrarEquipo(EquipoCreateDTO equipoCreateDTO);
     EquipoDTO actualizarEquipo(EquipoUpdateDTO equipoUpdateDTO);
     String eliminarEquipo(Integer id);
-
+    List<EquipoDTO> listarEquiposxSede(Integer id_cliente,Integer id_sede);
 }

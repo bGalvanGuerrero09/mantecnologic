@@ -15,15 +15,15 @@ public class SedeCliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_sede")
-    private Integer id_cliente;
+    public Integer id_sede;
 
     @Column(name ="dsc_sede",length = 200,nullable = false)
-    private String dsc_cliente;
+    public String dsc_sede;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
-    private Cliente cliente;
+    public Cliente cliente;
 
     @Column(name ="dsc_direccion",length = 50,nullable = false)
-    private String dsc_documento;
+    public String dsc_direccion;
 }

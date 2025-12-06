@@ -22,6 +22,11 @@ public class EquipoController {
         return new ResponseEntity<>(equipoService.listarEquipos(), HttpStatus.OK);
     }
 
+    @GetMapping("listarEquiposxSede/{clienteId}/{sedeId}")
+    public ResponseEntity<List<EquipoDTO>> listarEquiposxSede(@PathVariable("clienteId") Integer clienteId,@PathVariable("sedeId") Integer sedeId){
+        return new ResponseEntity<>(equipoService.listarEquiposxSede(clienteId,sedeId), HttpStatus.OK);
+    }
+
     @GetMapping("/obtenerEquipo/{equipoId}")
     public ResponseEntity<EquipoDTO> obtenerEquipo(@PathVariable("equipoId") Integer equipoId){
         return new ResponseEntity<>(equipoService.obtenerEquipoPorId(equipoId), HttpStatus.OK);

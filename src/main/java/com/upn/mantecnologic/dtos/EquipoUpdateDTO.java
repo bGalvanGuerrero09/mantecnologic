@@ -1,5 +1,9 @@
 package com.upn.mantecnologic.dtos;
 
+import com.upn.mantecnologic.model.EstadoEquipo;
+import com.upn.mantecnologic.model.ModeloEquipo;
+import com.upn.mantecnologic.model.SedeCliente;
+import com.upn.mantecnologic.model.TipoEquipo;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,16 +12,16 @@ import java.util.Date;
 @Getter
 @Setter
 public class EquipoUpdateDTO {
-    private Integer id_equipo;
-    private String dsc_equipo;
-    private String num_serie;
-    private int idTipo;
-    private int idModelo;
-    private int idSede;
-    private String dsc_ubicacion;
-    private int idEstado;
-    private Integer num_dias_mantenimiento;
-    private Date fch_ult_mantenimiento;
-    private String flg_necesita_mant;
-    private String dsc_observacion;
+    public Integer id_equipo;
+    public String dsc_equipo;
+    public String num_serie;
+    public TipoEquipo tipo;
+    public ModeloEquipo modelo;
+    public SedeCliente sede;
+    public String dsc_ubicacion;
+    public EstadoEquipo estado;
+    public Integer num_dias_mantenimiento;
+    public Date fch_ult_mantenimiento;
+    public String flg_necesita_mant;
+    public String dsc_observacion;
 }

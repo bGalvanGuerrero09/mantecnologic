@@ -4,7 +4,9 @@ import com.upn.mantecnologic.dtos.EquipoCreateDTO;
 import com.upn.mantecnologic.dtos.EquipoDTO;
 import com.upn.mantecnologic.dtos.EquipoUpdateDTO;
 import com.upn.mantecnologic.mappers.EquipoMapper;
+import com.upn.mantecnologic.mappers.PlanMantenimientoMapper;
 import com.upn.mantecnologic.model.Equipo;
+import com.upn.mantecnologic.model.PlanMantenimientoEquipos;
 import com.upn.mantecnologic.repository.EquipoRepository;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,12 @@ public class EquipoServiceImpl implements EquipoService {
     @Override
     public List<EquipoDTO> listarEquipos() {
         return EquipoMapper.instancia.listaEquipoAListaEquipoDTO(equipoRepository.findAll());
+    }
+
+    @Override
+    public List<EquipoDTO> listarEquiposxSede(Integer id_cliente, Integer id_sede) {
+        List<Equipo> equipos = equipoRepository.listarPorClienteYSede(id_cliente,id_sede);
+        return EquipoMapper.instancia.listaEquipoAListaEquipoDTO(equipos);
     }
 
     @Override

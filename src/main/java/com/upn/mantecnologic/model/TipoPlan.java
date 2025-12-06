@@ -15,8 +15,8 @@ public class TipoPlan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_tipo")
-    private Integer id_tipo;
+    public Integer id_tipo;
 
     @Column(name ="dsc_tipo",length = 200,nullable = false)
-    private String dsc_tipo;
+    public String dsc_tipo;
 }
